@@ -7,7 +7,7 @@ def pull_dependency(file_name):
   with open(file_name, "wb") as file:
     for part in map(chr,range(ord('a'),ord('z')+1)):
       part_name = "part_" + str(part)
-      url = "https://github.com/ai-powered-search/outdoors/raw/main/" + file_name + "." + part_name
+      url = "https://github.com/ai-powered-search/outdoors/raw/master/" + file_name + "." + part_name
       response = requests.get(url)
       if response.status_code == 200:
         print("Successfully downloaded " + part_name)
